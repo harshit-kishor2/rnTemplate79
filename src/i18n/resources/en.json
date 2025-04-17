@@ -1,0 +1,126 @@
+{
+  "welcome_message": "Welcome to the app",
+  "greeting": "Hello, {{name}}",
+  "app_name": "keepnest",
+  "by_continuing_you_agree_to_our": "By continuing, you agree to our",
+  "terms_of_service": "Terms of Service",
+  "and": "and",
+  "privacy_policy": "Privacy Policy",
+  "get_started_screen": {
+    "title": "Welcome to {{appName}}",
+    "description": "Store, organize, and secure your data effortlessly.",
+    "button_title": "Explore"
+  },
+  "walkthrough_screen": {
+    "skip": "Skip",
+    "next": "Next",
+    "prev": "Prev",
+    "walkthrough_title_1": "Capture & Save Anything",
+    "walkthrough_title_2": "Organize with {{nest}} & {{nest_stack}}",
+    "walkthrough_title_3": "Secure & Private Storage",
+    "walkthrough_description_1": "Quickly capture and save images, videos, links, and more from any app. Keep all your important content in one secure place.",
+    "walkthrough_description_2": "Easily categorize your items into {{nest}} (folders) and {{nest_stack}} (groups of items) to keep everything neat and accessible.",
+    "walkthrough_description_3": "Your data is encrypted with a secret password that only you know. Be careful—if lost, your data cannot be recovered!",
+    "button_title": "Get Started"
+  },
+  "select_mode_screen": {
+    "title": "Select Mode",
+    "description": "Pick your preferred mode",
+    "offline_mode": "Offline Mode",
+    "login_and_sync": "Login & Sync",
+    "offline_mode_description": "Your data is stored only on your device (no cloud backup).",
+    "login_and_sync_description": "Securely store your data and sync across devices.",
+    "button_title": "Continue"
+  },
+  "login_screen": {
+    "login": "Login"
+  },
+  "secrey_key_screen": {
+    "title": "Secure Your Data with an Encryption Key",
+    "description": "This encryption key protects your data. Keep it safe—losing it means losing access to your stored content.",
+    "enter_secret_key": "Enter your secret key",
+    "warning_description": "I understand that I must save this key securely. If lost, my data cannot be recovered.",
+    "button_title": "Save & Continue",
+    "validation": {
+      "required": "Secret key is required",
+      "min_length": "Secret key must be at least {{secretKeyMinLength}} characters",
+      "max_length": "Secret key cannot exceed {{secretKeyMaxLength}} characters",
+      "select_check_box": "Please select the checkbox to continue"
+    }
+  },
+  "set_up_profile_screen": {
+    "title": "Set Up Your Profile",
+    "personal_details": "Personal Details",
+    "email": "Email",
+    "username": "Username",
+    "enter_email": "Enter your email",
+    "enter_username": "Enter your username",
+    "button_title": "Finish & Start",
+    "camera": "Camera",
+    "gallery": "Gallery",
+    "cancel": "Cancel",
+    "choose_an_option": "Choose an option",
+    "validation": {
+      "profile_required": "Profile picture is required",
+      "profile_invalid": "Invalid profile picture.(Supported formats: jpg, png, jpeg)",
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email",
+      "email_already_exists": "Email already exists",
+      "username_required": "Username is required",
+      "username_invalid": "Invalid username",
+      "username_already_exists": "Username already exists",
+      "username_min_length": "Username must be at least {{usernameMinLength}} characters",
+      "username_max_length": "Username cannot exceed {{usernameMaxLength}} characters"
+    }
+  },
+  "home_screen": {
+    "empty_nest_title": "Your nest is empty",
+    "empty_nest_description": "Start adding items like images, notes, links, and more. Organize everything in one secure place!",
+    "type_something": "Type something..."
+  },
+  "drawer_screen": {
+    "send_feedback": "Send Feedback",
+    "logout": "Logout",
+    "share_app": "Share App",
+    "terms_and_conditions": "Terms & Conditions",
+    "privacy_policy": "Privacy Policy",
+    "logout_confirmation_title": "Logout",
+    "logout_confirmation_description": "Are you sure you want to logout?",
+    "logout_confirmation_cancel": "Cancel",
+    "logout_confirmation_logout": "Logout",
+    "logout_success": "Logout successfully",
+    "logout_error": "Logout failed"
+  },
+  "all_nest_screen": {
+    "empty_nest_title": "Your nest is empty",
+    "empty_nest_description": "Start adding items like images, notes, links, and more. Organize everything in one secure place!",
+    "type_something": "Type something...",
+    "home": "Home",
+    "settings": "Settings",
+    "search_nest": "Search Nest...",
+    "create_new_nest": "Create New Nest",
+    "enter_nest_name": "Enter Nest Name",
+    "create_nest": "Create Nest",
+    "update_nest": "Update Nest",
+    "delete_nest": "Delete Nest",
+    "wipe_nest": "Wipe Nest",
+    "delete_nest_confirmation_title": "Delete",
+    "delete_nest_confirmation_cancel": "Cancel",
+    "delete_nest_confirmation_description": "Are you sure you want to delete this nest?",
+    "wipe_nest_confirmation_title": "Wipe",
+    "wipe_nest_confirmation_cancel": "Cancel",
+    "wipe_nest_confirmation_description": "Are you sure you want to wipe this nest?",
+    "validation": {
+      "required": "Nest name is required",
+      "min_length": "Nest name must be at least {{nestNameMinLength}} characters",
+      "max_length": "Nest name cannot exceed {{nestNameMaxLength}} characters",
+      "invalid": "Invalid nest name",
+      "already_exists": "Nest name already exists",
+      "name_cant_be_keepnest": "Name can't be 'keepnest'"
+    }
+  },
+  "webview_screen": {
+    "t&c": "Terms & Conditions",
+    "p&p": "Privacy Policy"
+  }
+}
