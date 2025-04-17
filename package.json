@@ -10,10 +10,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "@shopify/flash-list": "^1.8.0",
     "dayjs": "^1.11.13",
     "i18next": "^24.2.3",
     "lottie-react-native": "^7.2.2",
     "react": "19.0.0",
+    "react-hook-form": "^7.55.0",
     "react-i18next": "^15.4.1",
     "react-native": "0.79.0",
     "react-native-device-info": "^14.0.4",
@@ -22,15 +25,21 @@
     "react-native-gesture-handler": "^2.25.0",
     "react-native-iphone-screen-helper": "^2.1.2",
     "react-native-keyboard-controller": "^1.17.0",
+    "react-native-linear-gradient": "^2.8.3",
     "react-native-localize": "^3.4.1",
     "react-native-mmkv": "^3.2.0",
     "react-native-paper": "^5.13.1",
     "react-native-reanimated": "^3.17.3",
     "react-native-responsive-fontsize": "^0.5.1",
     "react-native-safe-area-context": "^5.4.0",
+    "react-native-share": "^12.0.9",
+    "react-native-shimmer-placeholder": "^2.0.9",
     "react-native-size-matters": "^0.4.2",
     "react-native-svg": "^15.11.2",
-    "react-native-vector-icons": "^10.2.0"
+    "react-native-toast-message": "^2.3.0",
+    "react-native-vector-icons": "^10.2.0",
+    "react-native-webview": "^13.13.5",
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
