@@ -1,5 +1,5 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Text, View} from 'react-native';
 
 const LoginScreen: React.FC = () => {
   return (
@@ -10,3 +10,5 @@ const LoginScreen: React.FC = () => {
 };
 
 export default LoginScreen;
+
+const styles = StyleSheet.create({});

@@ -18,71 +18,52 @@ export const SCREEN_OPTIONS = {
 };
 
 export enum ROUTES {
-
-  MAIN_STACK = 'MAIN_STACK',
-  GUEST_STACK = 'GUEST_STACK',
-  USER_STACK = 'USER_STACK',
   SPLASH_SCREEN = 'SPLASH_SCREEN',
 
-  // Auth routes
+  // Auth Stack Navigator
+  AUTH_STACK = 'AUTH_STACK',
   LOGIN_SCREEN = 'LOGIN_SCREEN',
   REGISTER_SCREEN = 'REGISTER_SCREEN',
 
-  DRAWER = 'DRAWER',
-  BOTTOM_TAB = 'BOTTOM_TAB',
-
-  HOME_TAB = 'HOME_TAB',
-  HOME_SCREEN = 'HOME_SCREEN',
-
-  SETTING_TAB = 'SETTING_TAB',
+  // Protected Stack Navigator
+  PROTECTED_STACK = 'PROTECTED_STACK',
   SETTING_SCREEN = 'SETTING_SCREEN',
-
-  PROFILE_TAB = 'PROFILE_TAB',
   PROFILE_SCREEN = 'PROFILE_SCREEN',
 
-  NETWORK_LOGGER = 'NETWORK_LOGGER',
-
-  // Common routes
+  // Public Stack Navigator
+  PUBLIC_STACK = 'PUBLIC_STACK',
+  APP_UPDATE_SCREEN = 'APP_UPDATE_SCREEN',
+  NETWORK_LOG_SCREEN = 'NETWORK_LOG_SCREEN',
   WEBVIEW_SCREEN = 'WEBVIEW_SCREEN',
 
-  // Add modal routes here
+  // Modal Stack Navigator
+  MODAL_STACK = 'MODAL_STACK',
   FILTER_MODAL = 'FILTER_MODAL',
 
-  // Add all other routes here
 }
 
 //  All Screen Route
 export type RootStackParamList = {
-  [ROUTES.MAIN_STACK]: undefined;
-  [ROUTES.GUEST_STACK]: undefined;
-  [ROUTES.USER_STACK]: undefined;
+
   [ROUTES.SPLASH_SCREEN]: undefined;
 
-  // Auth routes
+  // Auth Stack Navigator
+  [ROUTES.AUTH_STACK]: undefined;
   [ROUTES.LOGIN_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
   [ROUTES.REGISTER_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
 
-  [ROUTES.DRAWER]: undefined;
-  [ROUTES.BOTTOM_TAB]: {from?: keyof RootStackParamList;} | undefined;
-
-  [ROUTES.HOME_TAB]: undefined;
-  [ROUTES.HOME_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-
-  [ROUTES.SETTING_TAB]: undefined;
+  // Protected Stack Navigator
+  [ROUTES.PROTECTED_STACK]: undefined;
   [ROUTES.SETTING_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-
-  [ROUTES.PROFILE_TAB]: undefined;
   [ROUTES.PROFILE_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
 
-  [ROUTES.NETWORK_LOGGER]:
-  | {from?: keyof RootStackParamList;}
-  | undefined;
+  // Public Stack Navigator
+  [ROUTES.PUBLIC_STACK]: undefined;
+  [ROUTES.APP_UPDATE_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
+  [ROUTES.NETWORK_LOG_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
+  [ROUTES.WEBVIEW_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
 
-  // Common routes
-  [ROUTES.WEBVIEW_SCREEN]:
-  | {webUrl?: string; from?: keyof RootStackParamList; page?: IWebViewPages;}
-  | undefined;
-
-  // Add modal routes here
+  // Modal Stack Navigator
+  [ROUTES.MODAL_STACK]: undefined;
   [ROUTES.FILTER_MODAL]: {from?: keyof RootStackParamList;} | undefined;
 };

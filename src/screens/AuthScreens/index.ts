@@ -1,3 +1,4 @@
-import HomeScreen from './HomeScreen';
-import ProfileScreen from './ProfileScreen';
-export {HomeScreen, ProfileScreen};
+import LoginScreen from './LoginScreen';
+import RegisterScreen from './RegisterScreen';
+
+export {LoginScreen, RegisterScreen};

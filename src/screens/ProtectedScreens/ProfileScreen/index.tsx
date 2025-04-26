@@ -1,5 +1,5 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Text, View} from 'react-native';
 
 const ProfileScreen: React.FC = () => {
   return (
@@ -10,3 +10,5 @@ const ProfileScreen: React.FC = () => {
 };
 
 export default ProfileScreen;
+
+const styles = StyleSheet.create({});

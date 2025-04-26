@@ -16,7 +16,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 
-const SplashScreen = () => {
+const SplashScreen: React.FC = () => {
   const theme = useAppTheme();
   const styles = useMemo(() => splashScreenStyles(), []);
 
