@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const AppUpdateScreen: React.FC = () => {
+const AppUpdateScreen = () => {
   return (
     <View>
       <Text>AppUpdateScreen</Text>

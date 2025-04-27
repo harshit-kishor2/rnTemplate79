@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const WebviewScreen: React.FC = () => {
+const WebviewScreen = () => {
   return (
     <View>
       <Text>WebviewScreen</Text>

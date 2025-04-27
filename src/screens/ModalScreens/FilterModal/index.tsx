@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const FilterModal: React.FC = () => {
+const FilterModal = () => {
   return (
     <View>
       <Text>FilterModal</Text>
