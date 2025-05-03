@@ -1,22 +1,57 @@
+import {simulateApiCall} from '@helpers/utils';
 import {useState, useEffect} from 'react';
+// import NetInfo from '@react-native-community/netinfo';
+const MIN_SPLASH_TIME = 5000;
 
-const SPLASH_TIMEOUT = 5000;
 
-const useSplashTimeout = (callback?: () => void) => {
-  const [isSplashEnd, setIsSplashEnd] = useState(false);
+const useSplashTimeout = () => {
+  const [status, setStatus] = useState<'idle' | 'success' | 'failed' | 'no-internet'>('idle');
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsSplashEnd(true);
-      if (callback) {
-        callback(); // Execute the provided callback function
+    let isMounted = true;
+    let timeoutId: NodeJS.Timeout | undefined;
+    const executeApiCall = async () => {
+      try {
+        // Wait for minimum splash time
+        await new Promise(resolve => setTimeout(resolve, MIN_SPLASH_TIME));
+
+        // TODO:  Check internet connectivity after 5 seconds
+        // const netInfo = await NetInfo.fetch();
+        // if (!netInfo.isConnected) {
+        //   if (isMounted) setStatus('no-internet');
+        //   return;
+        // }
+
+        // Proceed with API call if internet is available
+        const response = await Promise.race([
+          // Simulate api call here...
+          simulateApiCall(),
+          new Promise<Response>((_, reject) => {
+            timeoutId = setTimeout(() => reject(new Error('API timeout')), 30000);
+          }),
+        ]);
+
+        if (isMounted) {
+          setStatus(response.ok ? 'success' : 'failed');
+        }
+      } catch (error) {
+        if (isMounted) {
+          setStatus(error instanceof Error && error.message === 'API timeout' ? 'no-internet' : 'failed');
+        }
+      } finally {
+        if (timeoutId) clearTimeout(timeoutId);
       }
-    }, SPLASH_TIMEOUT);
+    };
 
-    return () => clearTimeout(timer);
-  }, [callback]);
+    executeApiCall();
 
-  return isSplashEnd;
+    return () => {
+      isMounted = false;
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
+
+  return status;
 };
 
 export default useSplashTimeout;

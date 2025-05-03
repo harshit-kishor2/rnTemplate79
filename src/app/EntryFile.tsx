@@ -1,14 +1,14 @@
 import React from 'react';
 import RootWrapper from './RootWrapper';
 import useExceptionHandler from '@hooks/useExceptionHandler';
-import RootNavigator from '@navigation/RootNavigator';
+import RootNavigationContainer from '@navigation/RootNavigationContainer';
 
 const EntryFile = () => {
   // Initialize exception handler with optional custom handlers
   useExceptionHandler();
   return (
     <RootWrapper>
-      <RootNavigator />
+      <RootNavigationContainer />
     </RootWrapper>
   );
 };

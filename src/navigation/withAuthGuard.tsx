@@ -3,7 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {Text} from 'react-native';
 import {RootStackParamList, ROUTES} from './route-config';
-import {delay, timeoutPromise} from '@helpers/utils';
+import {delay} from '@helpers/utils';
 
 // Define navigation prop type
 type NavigationProp = StackNavigationProp<RootStackParamList>;

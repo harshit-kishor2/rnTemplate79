@@ -1,5 +1,6 @@
 // Define routes as an enum
 export enum ROUTES {
+  SPLASH_SCREEN = 'SPLASH_SCREEN',
   LOGIN_SCREEN = 'LOGIN_SCREEN',
   REGISTER_SCREEN = 'REGISTER_SCREEN',
   SETTING_SCREEN = 'SETTING_SCREEN',
@@ -12,6 +13,7 @@ export enum ROUTES {
 
 // Define RootStackParamList with types for each route
 export type RootStackParamList = {
+  [ROUTES.SPLASH_SCREEN]: undefined;
   [ROUTES.LOGIN_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
   [ROUTES.REGISTER_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
   [ROUTES.SETTING_SCREEN]: {from?: keyof RootStackParamList;} | undefined;

@@ -2,9 +2,10 @@ import {CardStyleInterpolators, StackNavigationOptions} from '@react-navigation/
 import {LoginScreen, RegisterScreen} from '@screens/AuthScreens';
 import {FilterModal} from '@screens/ModalScreens';
 import {ProfileScreen, SettingScreen} from '@screens/ProtectedScreens';
-import {AppUpdateScreen, NetworkLogScreen, WebviewScreen} from '@screens/PublicScreens';
+import {AppUpdateScreen, NetworkLogScreen, SplashScreen, WebviewScreen} from '@screens/PublicScreens';
 import {ROUTES} from './route-config';
 import withAuthGuard from './withAuthGuard';
+import {Easing} from 'react-native';
 
 // Define the screen configuration type
 type ScreenConfig = {
@@ -43,8 +44,12 @@ export const groupedScreens: GroupedScreens[] = [
 
     screens: [
       {
+        name: ROUTES.SPLASH_SCREEN,
+        component: SplashScreen,
+      },
+      {
         name: ROUTES.APP_UPDATE_SCREEN,
-        component: AppUpdateScreen
+        component: AppUpdateScreen,
       },
       {
         name: ROUTES.NETWORK_LOG_SCREEN,

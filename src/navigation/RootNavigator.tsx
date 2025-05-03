@@ -1,32 +1,39 @@
-import {
-  NavigationContainer,
-  DarkTheme as NavigationDarkTheme,
-  DefaultTheme as NavigationDefaultTheme,
-} from '@react-navigation/native';
-import {useAppThemeContext} from '@theme/theme-provider';
-import React, {useMemo} from 'react';
-import {navigationRef} from './navigation-service';
-import MainStack from './stacks/MainStack';
+import {RootStackParamList, ROUTES} from '@navigation/route-config';
+import {groupedScreens} from '@navigation/screens';
+import {createStackNavigator} from '@react-navigation/stack';
+import React from 'react';
 
+// Create a stack navigator with the RootStackParamList type
+const RootStack = createStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
-
-  const {currentTheme} = useAppThemeContext();
-
-  const theme = useMemo(
-    () => (currentTheme.themeType === 'dark' ? NavigationDarkTheme : NavigationDefaultTheme),
-    [currentTheme.themeType]
-  );
-
-
   return (
-    <NavigationContainer
-      ref={navigationRef}
-      theme={theme}
+    <RootStack.Navigator
+      initialRouteName={ROUTES.SPLASH_SCREEN}
+      screenOptions={{headerShown: false}}
     >
-      <MainStack />
-    </NavigationContainer>
+      {
+        groupedScreens.map(({groupName, options: groupOptions, screens}) => (
+          <RootStack.Group
+            key={groupName}
+            screenOptions={groupOptions}
+          >
+            {
+              screens.map(({name, component, options: screenOptions}) => (
+                <RootStack.Screen
+                  key={name}
+                  name={name as keyof RootStackParamList}
+                  component={component}
+                  options={screenOptions}
+                />
+              ))
+            }
+          </RootStack.Group>
+        ))
+      }
+    </RootStack.Navigator>
   );
 };
 
 export default RootNavigator;
+
