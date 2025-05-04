@@ -77,9 +77,9 @@ export const shuffleArray = <T>(arr: T[]): T[] => {
 
 
 // Simulated API call for demonstration
-export const simulateApiCall = async (): Promise<Response> => {
+export const simulateApiCall = async (duration?: number): Promise<Response> => {
   // Simulate network delay (2-10 seconds)
-  const delay = Math.floor(Math.random() * 8000) + 2000;
+  const delay = duration ?? Math.floor(Math.random() * 8000) + 2000;
   await new Promise(resolve => setTimeout(resolve, delay));
   // Simulate different outcomes: 80% success, 10% failure, 10% network error
   const outcome = Math.random();

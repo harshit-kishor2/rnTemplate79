@@ -4,7 +4,7 @@ import AppText from '@components/atoms/AppText';
 import ASSETS from '@constants/assets';
 import DeviceUtils from '@helpers/device-utils';
 import {rpFont, rpHeight, rpWidth} from '@helpers/responsive-utils';
-import useSplashTimeout from '@hooks/useSplashTimeout';
+import useSplashTimeout from '@screens/PublicScreens/SplashScreen/useSplashTimeout';
 import {useAppNavigation} from '@navigation/hooks';
 import {ROUTES} from '@navigation/route-config';
 import {useAppTheme} from '@theme/theme-provider';
@@ -45,7 +45,7 @@ const SplashScreen = () => {
           targetScreen = ROUTES.LOGIN_SCREEN;
         } else if (status === 'success') {
           const isLoggedIn = false; // Replace with actual login check
-          targetScreen = isLoggedIn ? ROUTES.PROFILE_SCREEN : ROUTES.LOGIN_SCREEN;
+          targetScreen = isLoggedIn ? ROUTES.PROFILE_SCREEN : ROUTES.APP_UPDATE_SCREEN;
         }
         navigation.reset({
           index: 0,

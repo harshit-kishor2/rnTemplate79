@@ -57,4 +57,4 @@ commit-msg:
   parallel: true
   commands:
     validate_commit:
-      run: node ./githook/validate_commit.js
+      run: node ./scripts/validate_commit.js

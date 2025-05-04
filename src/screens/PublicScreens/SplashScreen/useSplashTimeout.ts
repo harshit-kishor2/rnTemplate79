@@ -1,7 +1,7 @@
 import {simulateApiCall} from '@helpers/utils';
 import {useState, useEffect} from 'react';
 // import NetInfo from '@react-native-community/netinfo';
-const MIN_SPLASH_TIME = 5000;
+const MIN_SPLASH_TIME = 2000;
 
 
 const useSplashTimeout = () => {
@@ -25,7 +25,7 @@ const useSplashTimeout = () => {
         // Proceed with API call if internet is available
         const response = await Promise.race([
           // Simulate api call here...
-          simulateApiCall(),
+          simulateApiCall(MIN_SPLASH_TIME),
           new Promise<Response>((_, reject) => {
             timeoutId = setTimeout(() => reject(new Error('API timeout')), 30000);
           }),

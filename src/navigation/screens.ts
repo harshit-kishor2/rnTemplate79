@@ -5,7 +5,6 @@ import {ProfileScreen, SettingScreen} from '@screens/ProtectedScreens';
 import {AppUpdateScreen, NetworkLogScreen, SplashScreen, WebviewScreen} from '@screens/PublicScreens';
 import {ROUTES} from './route-config';
 import withAuthGuard from './withAuthGuard';
-import {Easing} from 'react-native';
 
 // Define the screen configuration type
 type ScreenConfig = {
