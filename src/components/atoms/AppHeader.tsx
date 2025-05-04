@@ -1,8 +1,8 @@
-
 import React from 'react';
 import {Pressable, StyleSheet, View} from 'react-native';
 import AppVectorIcon, {IconType} from './AppVectorIcon';
 import AppText from './AppText';
+import {useAppNavigation} from '@navigation/hooks';
 
 interface AppHeaderProps {
   title: string;

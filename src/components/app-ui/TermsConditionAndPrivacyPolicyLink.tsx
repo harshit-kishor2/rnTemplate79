@@ -1,7 +1,8 @@
-
 import AppText from '@components/atoms/AppText';
 import {rpWidth} from '@helpers/responsive-utils';
 import {useAppTranslation} from '@i18n/i18n-provider';
+import {useAppNavigation} from '@navigation/hooks';
+import {RootStackParamList, ROUTES} from '@navigation/route-config';
 import React from 'react';
 import {View} from 'react-native';
 
@@ -13,10 +14,10 @@ const TermsConditionAndPrivacyPolicyLink: React.FC<
 > = props => {
   const {from} = props;
   const translate = useAppTranslation();
-  const navigation = useAppNavigation<RouteConst.LoginRoute>();
+  const navigation = useAppNavigation<ROUTES.LOGIN_SCREEN>();
 
   const onTermsOfServicePress = () => {
-    navigation.navigate(RouteConst.WebViewRoute, {
+    navigation.navigate(ROUTES.WEBVIEW_SCREEN, {
       from: from,
       page: 't&c',
       webUrl: 'https://google.com',
@@ -24,7 +25,7 @@ const TermsConditionAndPrivacyPolicyLink: React.FC<
   };
 
   const onPrivacyPolicyPress = () => {
-    navigation.navigate(RouteConst.WebViewRoute, {
+    navigation.navigate(ROUTES.WEBVIEW_SCREEN, {
       from: from,
       page: 'p&p',
       webUrl: 'https://google.com',
@@ -33,20 +34,18 @@ const TermsConditionAndPrivacyPolicyLink: React.FC<
 
   return (
     <>
-      <AppText
-        text={translate('login_screen.by_continuing_you_agree_to_our')}
-      />
+      <AppText text={translate('login_screen.login')} />
       <View style={{flexDirection: 'row'}}>
         <AppText
           onPress={onTermsOfServicePress}
-          text={translate('login_screen.terms_of_service')}
+          text={translate('login_screen.login')}
         />
         <View style={{padding: rpWidth(5)}}>
-          <AppText text={translate('login_screen.and')} />
+          <AppText text={translate('login_screen.login')} />
         </View>
         <AppText
           onPress={onPrivacyPolicyPress}
-          text={translate('login_screen.privacy_policy')}
+          text={translate('login_screen.login')}
         />
       </View>
     </>

@@ -14,13 +14,16 @@ export enum ROUTES {
 // Define RootStackParamList with types for each route
 export type RootStackParamList = {
   [ROUTES.SPLASH_SCREEN]: undefined;
-  [ROUTES.LOGIN_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-  [ROUTES.REGISTER_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-  [ROUTES.SETTING_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-  [ROUTES.PROFILE_SCREEN]: {from?: keyof RootStackParamList; userId?: string;} | undefined;
-  [ROUTES.APP_UPDATE_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-  [ROUTES.NETWORK_LOG_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-  [ROUTES.WEBVIEW_SCREEN]: {from?: keyof RootStackParamList;} | undefined;
-  [ROUTES.FILTER_MODAL]: {from?: keyof RootStackParamList;} | undefined;
+  [ROUTES.LOGIN_SCREEN]: {from?: keyof RootStackParamList} | undefined;
+  [ROUTES.REGISTER_SCREEN]: {from?: keyof RootStackParamList} | undefined;
+  [ROUTES.SETTING_SCREEN]: {from?: keyof RootStackParamList} | undefined;
+  [ROUTES.PROFILE_SCREEN]:
+    | {from?: keyof RootStackParamList; userId?: string}
+    | undefined;
+  [ROUTES.APP_UPDATE_SCREEN]: {from?: keyof RootStackParamList} | undefined;
+  [ROUTES.NETWORK_LOG_SCREEN]: {from?: keyof RootStackParamList} | undefined;
+  [ROUTES.WEBVIEW_SCREEN]:
+    | {from?: keyof RootStackParamList; page?: string; webUrl?: string}
+    | undefined;
+  [ROUTES.FILTER_MODAL]: {from?: keyof RootStackParamList} | undefined;
 };
-
