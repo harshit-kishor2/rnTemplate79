@@ -1,0 +1,5 @@
+Dependencies ->
+yarn add react-native-paper react-native-safe-area-context react-native-gesture-handler react-native-reanimated react-native-keyboard-controller react-i18next i18next dayjs react-native-localize react-native-mmkv react-native-vector-icons react-native-fast-image lottie-react-native react-native-svg react-native-exception-handler react-native-device-info react-native-iphone-screen-helper react-native-size-matters react-native-responsive-fontsize react-hook-form zod @hookform/resolvers react-native-webview react-native-toast-message react-native-linear-gradient react-native-shimmer-placeholder react-native-share react-native-blob-util react-native-permissions @react-navigation/native react-native-screens @react-navigation/stack @react-native-masked-view/masked-view @react-navigation/drawer @react-navigation/bottom-tabs zustand axios axios-logger
+
+Dev Dependencies ->
+yarn add -D babel-plugin-module-resolver lefthook @types/i18next @types/react-native-vector-icons react-native-svg-transformer
